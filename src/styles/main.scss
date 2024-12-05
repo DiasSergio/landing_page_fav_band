@@ -1,5 +1,55 @@
-$bgColor: red;
+@use 'properties';
+@use 'hero';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color: $bgColor;
+    background-color: properties.$backgroundColor;
+    font-family: sans-serif;
+}
+
+@mixin text($fontSize: 16px) {
+    color: properties.$mainTextColor;
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.text-small {
+    @include text(12px);
+}
+
+@mixin title($fontSize: 40px) {
+    @include text($fontSize);
+    color: properties.$secondaryTextColor;
+}
+
+.title--big {
+    @include title(40px);
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(28px);
+}
+
+.link-text {
+    @include text(18px);
+    color: properties.$secondaryTextColor;
+    text-decoration: underline;
 }
