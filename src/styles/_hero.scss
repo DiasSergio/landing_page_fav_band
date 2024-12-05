@@ -1,7 +1,7 @@
 @use 'properties';
 
 .hero {
-    padding: 5.6vw;
+    padding: 4.6vw;
     min-height: 80vh;
     background-image: url("../images/_hero/hero_bg.jpg");
     background-size: cover;
@@ -40,6 +40,7 @@
 
             &__combo {
                 width: calc(100% - 24px);
+                list-style-type: none;
 
                 img {
                     max-height: 60px;
