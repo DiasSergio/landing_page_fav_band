@@ -1,0 +1,41 @@
+.albuns {
+    padding: 5.6vw;
+
+    h2 {
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+
+        &__item {
+            text-align: center;
+            padding: 60px 44px 44px;
+            max-width: 380px;
+            width: 100%;
+            list-style-type: none;
+
+            &:nth-child(2) {
+                background-color: #ffffff46;
+                border-radius: 15px;
+            }
+
+            img {
+                height: 120px;
+            }
+        }
+    }
+
+
+
+    strong {
+        display: block;
+        margin-top: 24px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+}
