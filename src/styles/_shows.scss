@@ -1,0 +1,48 @@
+@use '_properties';
+
+.shows {
+    padding: 2vw 5.6vw;
+
+    &__list {
+        display: none;
+        margin-top: 44px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+
+        &--is-active {
+            display: grid;
+        }
+
+        &__item {
+            list-style-type: none;
+
+            img {
+                max-width: 100%;
+                border-radius: 5px;
+                opacity: 0.8;
+                height: 100%;
+            }
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+
+        &__button {
+            color: properties.$secondaryTextColor;
+            font-size: 20px;
+            border: none;
+            border-bottom: 5px solid transparent;
+            background-color: transparent;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            margin: 0 1vw;
+            cursor: pointer;
+
+            &--is-active {
+                border-bottom: 5px solid properties.$secondaryTextColor;
+            }
+        }
+    }
+}
