@@ -9,6 +9,10 @@
         display: flex;
         justify-content: space-around;
 
+        @media(max-width:1023px) {
+            flex-wrap: wrap;
+        }
+
         &__item {
             text-align: center;
             padding: 60px 44px 44px;
