@@ -10,6 +10,10 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
 
+        @media (max-width:768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
         &--is-active {
             display: grid;
         }
@@ -30,6 +34,11 @@
         display: flex;
         justify-content: center;
 
+        @media(max-width:768) {
+            white-space: nowrap;
+            overflow-x: scroll;
+        }
+
         &__button {
             color: properties.$secondaryTextColor;
             font-size: 20px;
@@ -40,6 +49,11 @@
             text-transform: uppercase;
             margin: 0 1vw;
             cursor: pointer;
+
+            @media(max-width:768px) {
+                font-size: 16px;
+
+            }
 
             &--is-active {
                 border-bottom: 5px solid properties.$secondaryTextColor;
