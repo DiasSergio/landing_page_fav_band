@@ -2,13 +2,17 @@
 @use 'hero';
 @use 'shows';
 @use 'albuns';
-
+@use 'listen-yourway';
+@use 'faq';
+@use 'footer';
+@use 'header';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    list-style: none;
 }
 
 body {
@@ -64,9 +68,34 @@ body {
     font-size: 18px;
     color: properties.$secondaryTextColor;
     margin: 0 auto;
-    margin-top: 2vw;
-    margin-bottom: 8px;
-    background-color: #6421ff;
+    background-color: properties.$bgColorPrimaryButton;
     text-transform: uppercase;
     border-radius: 4px;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid properties.$backgroundColor;
+
+    &:hover {
+        background-color: lighten(properties.$bgColorPrimaryButton, 3%);
+        cursor: pointer;
+    }
+
+    &--secondary {
+        background-color: properties.$bgColorSecondaryButton;
+        border-color: properties.$bgColorSecondaryButton;
+
+        &:hover {
+            background-color: lighten(properties.$bgColorSecondaryButton, 3%);
+        }
+    }
+
+    &--dark {
+        background-color: rgba(0, 0, 0, 0.8);
+        border-color: properties.$secondaryTextColor;
+
+        &:hover {
+            background-color: properties.$secondaryTextColor;
+            color: properties.$backgroundColor;
+        }
+    }
 }
